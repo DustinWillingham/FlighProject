@@ -127,14 +127,14 @@ public class Register{
 		ReturnToLogin(event);
 	}
 	
-	public void ReturnToLogin(ActionEvent event) {
+	public void ReturnToLogin(ActionEvent returnToLogin) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/myFlight/Views/Login.fxml"));
-			Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Stage stage = (Stage)((Node)returnToLogin.getSource()).getScene().getWindow();
 			Scene scene = new Scene(root, 600, 400);
 			stage.setScene(scene);
 			stage.show();
-		} catch (Exception f) {
+		} catch (Exception e) {
 		  }
 	}
 
