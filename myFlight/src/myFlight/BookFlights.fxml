@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myFlight.BookFlightsController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/imgs/tableBackground.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="15.0" layoutY="14.0" prefHeight="501.0" prefWidth="775.0" style="-fx-background-color: #ECECE7;">
+        <columns>
+          <TableColumn fx:id="colFlightID" prefWidth="90.0" text="FlightID" />
+          <TableColumn fx:id="colFromCity" minWidth="0.0" prefWidth="177.0" text="From " />
+            <TableColumn fx:id="colToCity" prefWidth="188.0" text="Destination" />
+            <TableColumn fx:id="colFlightDate" prefWidth="122.0" text="Flight Date" />
+            <TableColumn fx:id="colFlightTime" prefWidth="106.0" text="Flight Time" />
+            <TableColumn fx:id="colSeats" prefWidth="91.0" text="Seats Available" />
+        </columns>
+      </TableView>
+      <Button layoutX="325.0" layoutY="543.0" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: #ECECE7;" text="Load Flights" />
+      <Button layoutX="100.0" layoutY="543.0" mnemonicParsing="false" onAction="#bookAFlight" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: #ECECE7;" text="Book Flight" />
+      <Button layoutX="548.0" layoutY="543.0" mnemonicParsing="false" onAction="#ReturnToCustomerInterface" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: #ECECE7;" text="Return to menu" />
+   </children>
+</AnchorPane>
